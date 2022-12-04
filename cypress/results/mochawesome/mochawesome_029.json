@@ -1,0 +1,154 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2022-12-04T19:12:30.610Z",
+    "end": "2022-12-04T19:14:26.273Z",
+    "duration": 115663,
+    "testsRegistered": 3,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 1,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "77ab43bd-28ba-41e5-8397-c7388f96904d",
+      "title": "",
+      "fullFile": "cypress\\e2e\\ViZzitt\\login.cy.js",
+      "file": "cypress\\e2e\\ViZzitt\\login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "04271e83-8a92-4bbc-b5a1-39d73955ce8e",
+          "title": "Test Login option on VizZit website",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Successfully Login with username and password",
+              "fullTitle": "Test Login option on VizZit website Successfully Login with username and password",
+              "timedOut": null,
+              "duration": 14364,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.populateLoginForm(data.first_name, data.password);\ncy.get('.alert').should('contain', 'Welcome back');\ncy.url().should('contain', 'https://vizzitt.onrender.com/places');",
+              "err": {
+                "message": "CypressError: Timed out after waiting `12000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `12000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.",
+                "estack": "CypressError: Timed out after waiting `12000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `12000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n    at timedOutWaitingForPageLoad (https://vizzitt.onrender.com/__cypress/runner/cypress_runner.js:141258:72)\n    at <unknown> (https://vizzitt.onrender.com/__cypress/runner/cypress_runner.js:141649:16)\n    at tryCatcher (https://vizzitt.onrender.com/__cypress/runner/cypress_runner.js:11327:23)\n    at <unknown> (https://vizzitt.onrender.com/__cypress/runner/cypress_runner.js:6449:41)\n    at tryCatcher (https://vizzitt.onrender.com/__cypress/runner/cypress_runner.js:11327:23)\n    at Promise._settlePromiseFromHandler (https://vizzitt.onrender.com/__cypress/runner/cypress_runner.js:9262:31)\n    at Promise._settlePromise (https://vizzitt.onrender.com/__cypress/runner/cypress_runner.js:9319:18)\n    at Promise._settlePromise0 (https://vizzitt.onrender.com/__cypress/runner/cypress_runner.js:9364:10)\n    at Promise._settlePromises (https://vizzitt.onrender.com/__cypress/runner/cypress_runner.js:9440:18)\n    at _drainQueueStep (https://vizzitt.onrender.com/__cypress/runner/cypress_runner.js:6034:12)\n    at _drainQueue (https://vizzitt.onrender.com/__cypress/runner/cypress_runner.js:6027:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://vizzitt.onrender.com/__cypress/runner/cypress_runner.js:6043:5)\n    at Async.drainQueues (https://vizzitt.onrender.com/__cypress/runner/cypress_runner.js:5913:14)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/e2e/ViZzitt/login.cy.js:16:11)",
+                "diff": null
+              },
+              "uuid": "83fd3ddc-46e4-46f4-8248-2467037f93f5",
+              "parentUUID": "04271e83-8a92-4bbc-b5a1-39d73955ce8e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Attempt to login with incorrect name or password",
+              "fullTitle": "Test Login option on VizZit website Attempt to login with incorrect name or password",
+              "timedOut": null,
+              "duration": 101235,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.populateLoginForm(data.first_name, 'sasadasddas');\ncy.get('.alert').should('contain', 'Password or username is incorrect');\ncy.url().should('contain', 'https://vizzitt.onrender.com/login');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 100000ms: Expected to find content: 'Login' within the element: [ <a.nav-link.active>, 2 more... ] but never did.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Test Login option on VizZit...`",
+                "estack": "AssertionError: Timed out retrying after 100000ms: Expected to find content: 'Login' within the element: [ <a.nav-link.active>, 2 more... ] but never did.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Test Login option on VizZit...`\n    at Context.eval (webpack:///./cypress/support/commands.js:67:29)",
+                "diff": null
+              },
+              "uuid": "d5149b36-008b-4878-a41a-0a228e27f4d2",
+              "parentUUID": "04271e83-8a92-4bbc-b5a1-39d73955ce8e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Attempt to login but leave input fields empty",
+              "fullTitle": "Test Login option on VizZit website Attempt to login but leave input fields empty",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.btn, btn-success').click();\ncy.get('#username').should(\"have.css\", \"border-color\", \"rgb(220, 53, 69)\");\ncy.url().should('contain', 'https://vizzitt.onrender.com/login');",
+              "err": {},
+              "uuid": "f86b8659-0258-415b-aa9e-8968c442db00",
+              "parentUUID": "04271e83-8a92-4bbc-b5a1-39d73955ce8e",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "83fd3ddc-46e4-46f4-8248-2467037f93f5",
+            "d5149b36-008b-4878-a41a-0a228e27f4d2"
+          ],
+          "pending": [],
+          "skipped": [
+            "f86b8659-0258-415b-aa9e-8968c442db00"
+          ],
+          "duration": 115599,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

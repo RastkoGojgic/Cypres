@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-12-04T19:45:06.979Z",
+    "end": "2022-12-04T19:45:27.832Z",
+    "duration": 20853,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "26cbbc21-3a02-4840-8804-1aba77db89b1",
+      "title": "",
+      "fullFile": "cypress\\e2e\\automation-test-store\\add-products-to-basket.cy.js",
+      "file": "cypress\\e2e\\automation-test-store\\add-products-to-basket.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "34ce9588-cecc-4c48-99a2-7b7a97ef24e8",
+          "title": "Add products to basket via automation webstore",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Add products",
+              "fullTitle": "Add products to basket via automation webstore Add products",
+              "timedOut": null,
+              "duration": 18541,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "for (let product of products) {\n  //cy.addToCart(product)\n  automationsStore_HairCarePage_PO.addToCart(product);\n}\ncy.get('.block_7').click();\nfor (let product of products) {\n  //cy.checkCartItem(product)\n  automationsStore_HairCarePage_PO.checkCartItem(product);\n}",
+              "err": {},
+              "uuid": "fab707b5-3212-4485-8b58-669ebf11af8d",
+              "parentUUID": "34ce9588-cecc-4c48-99a2-7b7a97ef24e8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fab707b5-3212-4485-8b58-669ebf11af8d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 18541,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

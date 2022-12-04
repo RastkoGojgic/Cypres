@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-12-04T19:25:07.006Z",
+    "end": "2022-12-04T19:25:10.875Z",
+    "duration": 3869,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "77036ff9-659d-49dd-aee8-5e83481a1c72",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Webdriver-uni\\browser-navigation.cy.js",
+      "file": "cypress\\e2e\\Webdriver-uni\\browser-navigation.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8d9fdd03-cc91-4300-ba12-d300d351eed7",
+          "title": "Preform navigation on webdriver uni page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Succesffully navigate to todolist and go back to the home page",
+              "fullTitle": "Preform navigation on webdriver uni page Succesffully navigate to todolist and go back to the home page",
+              "timedOut": null,
+              "duration": 2130,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://www.webdriveruniversity.com/\");\ncy.get('a[href=\"To-Do-List/index.html\"]').invoke('removeAttr', 'target').click();\ncy.url().should('include', 'To-Do-List');\ncy.go('back');\ncy.url().should('include', 'http://www.webdriveruniversity.com/');",
+              "err": {},
+              "uuid": "1657106f-8363-40ce-8bc7-1e597c6f9b4b",
+              "parentUUID": "8d9fdd03-cc91-4300-ba12-d300d351eed7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1657106f-8363-40ce-8bc7-1e597c6f9b4b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2130,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

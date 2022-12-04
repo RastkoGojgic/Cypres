@@ -1,0 +1,145 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-12-04T19:10:34.631Z",
+    "end": "2022-12-04T19:11:11.509Z",
+    "duration": 36878,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ae8ec027-366a-466f-b8ad-0d61e0124b60",
+      "title": "",
+      "fullFile": "cypress\\e2e\\ViZzitt\\add-new-place.cy.js",
+      "file": "cypress\\e2e\\ViZzitt\\add-new-place.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d96bc08f-6536-4639-9c09-4dcbacad8a73",
+          "title": "Test Add new place functionality on VizZit website",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Successfully add a new place via following route - home/login/add new place",
+              "fullTitle": "Test Add new place functionality on VizZit website Successfully add a new place via following route - home/login/add new place",
+              "timedOut": null,
+              "duration": 20858,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.nav').find('a').contains('Login').click();\ncy.populateLoginForm(data.first_name, data.password);\ncy.get(\"a[href='/places/new']\").click();\ncy.url().should('contain', 'https://vizzitt.onrender.com/places/new');\ncy.addNewPlacePopulateInputs(\"New Random Place\", \"Belgrade\", \"22\", \"A place in Belgrade\", \"cypress/fixtures/Belgrade.jpg\");\ncy.get('button').contains('Delete Place').click();",
+              "err": {},
+              "uuid": "7f7d7f44-5258-4ec5-a196-73aa86d2376a",
+              "parentUUID": "d96bc08f-6536-4639-9c09-4dcbacad8a73",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Successfully add a new place via following route - home/all/places/add new place/login",
+              "fullTitle": "Test Add new place functionality on VizZit website Successfully add a new place via following route - home/all/places/add new place/login",
+              "timedOut": null,
+              "duration": 12976,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.nav').find('a').contains('All Places').click();\ncy.get(\"a[href='/places/new']\").click();\ncy.populateLoginForm(data.first_name, data.password);\ncy.addNewPlacePopulateInputs(\"New Random Place\", \"Belgrade\", \"22\", \"A place in Belgrade\", \"cypress/fixtures/Belgrade.jpg\");\ncy.get('button').contains('Delete Place').click();",
+              "err": {},
+              "uuid": "d9e1af22-fe45-46a1-b511-0f159bdad7c7",
+              "parentUUID": "d96bc08f-6536-4639-9c09-4dcbacad8a73",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Try to add a new place whilst not logged in",
+              "fullTitle": "Test Add new place functionality on VizZit website Try to add a new place whilst not logged in",
+              "timedOut": null,
+              "duration": 2970,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.nav').find('a').contains('All Places').click();\ncy.get(\"a[href='/places/new']\").click();\ncy.get('.alert').should('contain', 'You must be signed in');",
+              "err": {},
+              "uuid": "b1a39fd6-e07c-4adf-ac9d-d6ae71c6eb30",
+              "parentUUID": "d96bc08f-6536-4639-9c09-4dcbacad8a73",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7f7d7f44-5258-4ec5-a196-73aa86d2376a",
+            "d9e1af22-fe45-46a1-b511-0f159bdad7c7",
+            "b1a39fd6-e07c-4adf-ac9d-d6ae71c6eb30"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 36804,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

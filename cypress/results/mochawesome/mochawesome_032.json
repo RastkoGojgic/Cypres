@@ -1,0 +1,202 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-12-04T19:22:21.692Z",
+    "end": "2022-12-04T19:23:11.423Z",
+    "duration": 49731,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8f8464f3-f931-4295-9273-dbc94d9217b5",
+      "title": "",
+      "fullFile": "cypress\\e2e\\ViZzitt\\add- comment.cy.js",
+      "file": "cypress\\e2e\\ViZzitt\\add- comment.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "623731dd-cc59-431b-8925-5f7198af5bd1",
+          "title": "Test comments functionality on VizZit website",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Successfully leave a comment on VizZit website",
+              "fullTitle": "Test comments functionality on VizZit website Successfully leave a comment on VizZit website",
+              "timedOut": null,
+              "duration": 25627,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.NavigateToLoginPage();\ncy.populateLoginForm(\"rastko\", \"juventus1\");\ncy.get('.btn, .btn-info').first().click({\n  force: true\n});\ncy.get('[for=\"first-rate4\"]').click();\ncy.get('#body').type('This is great place');\ncy.get('.btn').contains('Submit').click();\ncy.get('form').next().as('commentContainer');\ncy.get('@commentContainer').should('contain', 'rastko');\ncy.get('@commentContainer').should('contain', 'This is great place');\ncy.get('.starability-result').should(\"have.attr\", \"data-rating\", 4);",
+              "err": {},
+              "uuid": "c8ec87ff-788d-4c54-a20d-c266d4917532",
+              "parentUUID": "623731dd-cc59-431b-8925-5f7198af5bd1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Try to delete a comment on VizZit website without loging in",
+              "fullTitle": "Test comments functionality on VizZit website Try to delete a comment on VizZit website without loging in",
+              "timedOut": null,
+              "duration": 2180,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.get('.nav').find('a').contains('All Places').click();\ncy.get('.btn, .btn-info').first().click({\n  force: true\n});\ncy.get('.btn-sm').should('not.exist');",
+              "err": {},
+              "uuid": "ce0a2536-4e95-41f8-b837-5e80e2c384db",
+              "parentUUID": "623731dd-cc59-431b-8925-5f7198af5bd1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Successfully delete a comment on VizZit website",
+              "fullTitle": "Test comments functionality on VizZit website Successfully delete a comment on VizZit website",
+              "timedOut": null,
+              "duration": 6538,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.NavigateToLoginPage();\ncy.populateLoginForm(\"rastko\", \"juventus1\");\ncy.get('.btn, .btn-info').first().click({\n  force: true\n});\ncy.get('.btn-sm').contains('Delete').click();\ncy.get('.alert').should('contain', 'Successfully deleted a review');",
+              "err": {},
+              "uuid": "3893cd37-f2d4-48f5-a922-cd17147aa686",
+              "parentUUID": "623731dd-cc59-431b-8925-5f7198af5bd1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Try to leave a comment on VizZit website without comment body text",
+              "fullTitle": "Test comments functionality on VizZit website Try to leave a comment on VizZit website without comment body text",
+              "timedOut": null,
+              "duration": 6138,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.NavigateToLoginPage();\ncy.populateLoginForm(\"rastko\", \"juventus1\");\ncy.get('.btn, .btn-info').first().click({\n  force: true\n});\ncy.get('[for=\"first-rate4\"]').click();\ncy.get('.btn').contains('Submit').click();\ncy.get('#body').should(\"have.css\", \"border-color\", \"rgb(220, 53, 69)\");",
+              "err": {},
+              "uuid": "a7c23d5a-8ffb-49e5-ae5c-8a538c6539b1",
+              "parentUUID": "623731dd-cc59-431b-8925-5f7198af5bd1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Try to leave a comment on VizZit website without logging in",
+              "fullTitle": "Test comments functionality on VizZit website Try to leave a comment on VizZit website without logging in",
+              "timedOut": null,
+              "duration": 1987,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.get('.nav').find('a').contains('All Places').click();\ncy.get('.btn, .btn-info').first().click({\n  force: true\n});\ncy.get('.card-title').should('contain', 'Kalemegdanska Tvrđava');\ncy.get('.btn-success').should('not.exist');",
+              "err": {},
+              "uuid": "d8208846-fb2a-44be-a216-bed8f57de958",
+              "parentUUID": "623731dd-cc59-431b-8925-5f7198af5bd1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Try to delete a comment on VizZit website that was posted by someone else",
+              "fullTitle": "Test comments functionality on VizZit website Try to delete a comment on VizZit website that was posted by someone else",
+              "timedOut": null,
+              "duration": 7126,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.NavigateToLoginPage();\ncy.populateLoginForm(\"rastko\", \"juventus1\");\ncy.get('.card').contains('Dogma Brewery').parent().find('a').click({\n  force: true\n});\ncy.get('.btn-sm').should('not.exist');",
+              "err": {},
+              "uuid": "c66d0419-9e44-460d-b677-f812f6fd62bf",
+              "parentUUID": "623731dd-cc59-431b-8925-5f7198af5bd1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c8ec87ff-788d-4c54-a20d-c266d4917532",
+            "ce0a2536-4e95-41f8-b837-5e80e2c384db",
+            "3893cd37-f2d4-48f5-a922-cd17147aa686",
+            "a7c23d5a-8ffb-49e5-ae5c-8a538c6539b1",
+            "d8208846-fb2a-44be-a216-bed8f57de958",
+            "c66d0419-9e44-460d-b677-f812f6fd62bf"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 49596,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

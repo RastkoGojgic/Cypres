@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-12-04T19:08:03.087Z",
+    "end": "2022-12-04T19:08:11.506Z",
+    "duration": 8419,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "18765381-cfd7-44d5-9d59-60f91ef3e010",
+      "title": "",
+      "fullFile": "cypress\\e2e\\automation-test-store\\variables-and-cy-commands.cy.js",
+      "file": "cypress\\e2e\\automation-test-store\\variables-and-cy-commands.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c06dd00a-abfd-4723-ae2d-095a58831c58",
+          "title": "Verifying variables cy commands and jquery commands",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Navigating to specific product pages",
+              "fullTitle": "Verifying variables cy commands and jquery commands Navigating to specific product pages",
+              "timedOut": null,
+              "duration": 5918,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://automationteststore.com/\"); //The following will fail\n// const makeup = cy.get('a[href*=\"product/category&path=\"]').contains('Makeup')\n// const skincare = cy.get('a[href*=\"product/category&path=\"]').contains('Skincare')\n// makeup.click()\n// skincare.click()\n//The following will work\n// const makeup = cy.get('a[href*=\"product/category&path=\"]').contains('Makeup')\n// makeup.click()\n// const skincare = cy.get('a[href*=\"product/category&path=\"]').contains('Skincare')\n// skincare.click()\n//Recomended approach\n// cy.get('a[href*=\"product/category&path=\"]').contains('Makeup').click()\n// cy.get('a[href*=\"product/category&path=\"]').contains('Skincare').click()\ncy.get('a[href*=\"product/category&path=\"]').contains('Makeup').click();\ncy.get('.maintext').should('have.text', \"Makeup\");\ncy.get('.maintext').then(mainEl => {\n  cy.log(mainEl.text());\n});",
+              "err": {},
+              "uuid": "4219db31-9d5f-40f3-a354-aeb3604576e1",
+              "parentUUID": "c06dd00a-abfd-4723-ae2d-095a58831c58",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4219db31-9d5f-40f3-a354-aeb3604576e1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5918,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

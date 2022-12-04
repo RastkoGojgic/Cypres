@@ -1,0 +1,150 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-12-04T19:27:50.469Z",
+    "end": "2022-12-04T19:28:07.464Z",
+    "duration": 16995,
+    "testsRegistered": 3,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 2,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "8bac1bb5-1d07-425a-8f5a-e8d0c342e07b",
+      "title": "",
+      "fullFile": "cypress\\e2e\\ViZzitt\\delete-place.cy.js",
+      "file": "cypress\\e2e\\ViZzitt\\delete-place.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9cd05c6e-feb6-4d8a-a497-3389959c54d1",
+          "title": "Test delete place functionality on VizZit website",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Try to delete a place whilst not logged in",
+              "fullTitle": "Test delete place functionality on VizZit website Try to delete a place whilst not logged in",
+              "timedOut": null,
+              "duration": 16491,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.get('.nav').find('a').contains('All Places').click();\ncy.get('.card').contains('New Random Place').parent().find('a').click({\n  force: true\n});\ncy.get('.btn-success').should('not.exist');",
+              "err": {
+                "message": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Cannot read properties of undefined (reading 'get')\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Test delete place functiona...`",
+                "estack": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Cannot read properties of undefined (reading 'get')\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Test delete place functiona...`\n    at get state [as state] (https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js:35:11071)\n    at P.getOpacityAtLatLng (https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js:35:12041)\n    at Map._queryFogOpacity (https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js:35:464729)\n    at on._evaluateOpacity (https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js:35:435973)\n    at i (https://vizzitt.onrender.com/places/638cf4c47abf9d0034dfcfca:4:1410)\n    at <unknown> (https://vizzitt.onrender.com/places/638cf4c47abf9d0034dfcfca:4:1783)",
+                "diff": null
+              },
+              "uuid": "6ab144fe-7c26-4790-a1c3-f550bcd0494f",
+              "parentUUID": "9cd05c6e-feb6-4d8a-a497-3389959c54d1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Try to delete a place created by someone else",
+              "fullTitle": "Test delete place functionality on VizZit website Try to delete a place created by someone else",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.NavigateToLoginPage();\ncy.populateLoginForm(\"rastko\", \"juventus1\");\ncy.get('.card').contains('Muzej Primenjene Umetnosti').parent().find('a').click({\n  force: true\n});\ncy.get('.btn-danger').should('not.exist');",
+              "err": {},
+              "uuid": "34d4c7b7-78cf-47e2-9d1a-648726712a93",
+              "parentUUID": "9cd05c6e-feb6-4d8a-a497-3389959c54d1",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Seuccessfully delete a place",
+              "fullTitle": "Test delete place functionality on VizZit website Seuccessfully delete a place",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.NavigateToLoginPage();\ncy.populateLoginForm(\"rastko\", \"juventus1\");\ncy.get('.card').contains('New Random Place').parent().find('a').click({\n  force: true\n});\ncy.get('.btn-danger').contains(\"Delete\").click();\ncy.get('.alert').should('contain', 'Successfully deleted a place');",
+              "err": {},
+              "uuid": "ddc33d9c-9374-4e66-b62e-772c7983b58e",
+              "parentUUID": "9cd05c6e-feb6-4d8a-a497-3389959c54d1",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "6ab144fe-7c26-4790-a1c3-f550bcd0494f"
+          ],
+          "pending": [],
+          "skipped": [
+            "34d4c7b7-78cf-47e2-9d1a-648726712a93",
+            "ddc33d9c-9374-4e66-b62e-772c7983b58e"
+          ],
+          "duration": 16491,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

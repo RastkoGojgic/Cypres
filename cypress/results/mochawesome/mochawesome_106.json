@@ -1,0 +1,145 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-12-04T19:47:17.515Z",
+    "end": "2022-12-04T19:47:30.365Z",
+    "duration": 12850,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f094bf64-f6e9-496d-8eee-9f78c04666cb",
+      "title": "",
+      "fullFile": "cypress\\e2e\\automation-test-store\\iterate-over-products.cy.js",
+      "file": "cypress\\e2e\\automation-test-store\\iterate-over-products.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "db85dea2-0d22-4026-a8c9-2cdc165f7f2e",
+          "title": "Test automated test store for iterating over elements",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test case for successfull iteration over elements and selecting one",
+              "fullTitle": "Test automated test store for iterating over elements Test case for successfull iteration over elements and selecting one",
+              "timedOut": null,
+              "duration": 7390,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.fixed_wrapper .prdocutname').each(($el, index, $list) => {\n  cy.log(\"Index: \" + index + \" : \" + $el.text());\n});",
+              "err": {},
+              "uuid": "8bcd0469-8558-4e69-8988-76d29cf4f15c",
+              "parentUUID": "db85dea2-0d22-4026-a8c9-2cdc165f7f2e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test case for successfull iteration over elements and selecting one",
+              "fullTitle": "Test automated test store for iterating over elements Test case for successfull iteration over elements and selecting one",
+              "timedOut": null,
+              "duration": 2085,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// cy.get('.fixed_wrapper .prdocutname').each(($el, index, $list) => {\n//     if($el.text() === \"Seaweed Conditioner\"){\n//         cy.wrap($el).click()\n//     }\n//   })\ncy.selectProduct(\"Seaweed Conditioner\");",
+              "err": {},
+              "uuid": "73fc1824-9dd1-4e59-a7e2-846fe0d7c97a",
+              "parentUUID": "db85dea2-0d22-4026-a8c9-2cdc165f7f2e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test case for successfull iteration over elements and selecting another element using commands",
+              "fullTitle": "Test automated test store for iterating over elements Test case for successfull iteration over elements and selecting another element using commands",
+              "timedOut": null,
+              "duration": 1542,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.selectProduct(\"Eau Parfumee au The Vert Shampoo\");",
+              "err": {},
+              "uuid": "b8c27a6f-64a3-417f-aa16-087522e6b306",
+              "parentUUID": "db85dea2-0d22-4026-a8c9-2cdc165f7f2e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8bcd0469-8558-4e69-8988-76d29cf4f15c",
+            "73fc1824-9dd1-4e59-a7e2-846fe0d7c97a",
+            "b8c27a6f-64a3-417f-aa16-087522e6b306"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11017,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

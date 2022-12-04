@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-12-04T19:47:40.531Z",
+    "end": "2022-12-04T19:47:44.026Z",
+    "duration": 3495,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "dd2b09b2-53af-46b0-93c7-a14da5e41947",
+      "title": "",
+      "fullFile": "cypress\\e2e\\automation-test-store\\sum-values.cy.js",
+      "file": "cypress\\e2e\\automation-test-store\\sum-values.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2d04890f-33da-47cb-8a59-b033d4542740",
+          "title": "Calculate total products price in automation test store items using various commands",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Sum of all product prices",
+              "fullTitle": "Calculate total products price in automation test store items using various commands Sum of all product prices",
+              "timedOut": null,
+              "duration": 1856,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://automationteststore.com/\");\ncy.get('.pricenew, .oneprice').each(($el, index, $list) => {\n  let re = /\\d+/;\n  let price = $el.text().match(re).join('');\n  console.log(price);\n});",
+              "err": {},
+              "uuid": "7ee9849f-2f84-43f0-911d-6337c59c230f",
+              "parentUUID": "2d04890f-33da-47cb-8a59-b033d4542740",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7ee9849f-2f84-43f0-911d-6337c59c230f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1856,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

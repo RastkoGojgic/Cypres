@@ -1,0 +1,13 @@
+class ContactUs_PO{
+    submitForm(first_name, last_name, email, comment, selector, message){
+        cy.get('[name="first_name"]').type(first_name)
+        cy.get('[name="last_name"]').type(last_name)
+        cy.get('[name="email"]').type(email)
+        cy.get('textarea.feedback-input').type(comment)
+        cy.get('[type="submit"]').click()
+        cy.get(selector).contains(message, {timeout:60000})
+    }
+
+}
+
+export default ContactUs_PO

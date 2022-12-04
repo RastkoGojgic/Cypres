@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-12-04T19:25:17.152Z",
+    "end": "2022-12-04T19:25:23.925Z",
+    "duration": 6773,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a20a8ae3-0c4d-44b4-938d-e9d06936d7c7",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Webdriver-uni\\contact-us.cy.js",
+      "file": "cypress\\e2e\\Webdriver-uni\\contact-us.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "53e7e416-cd34-47e2-816c-269ce665884c",
+          "title": "Test contact-us page via webdriver uni",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Successfully submit a contact us form",
+              "fullTitle": "Test contact-us page via webdriver uni Successfully submit a contact us form",
+              "timedOut": null,
+              "duration": 3421,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "contactUs_PO.submitForm(data.first_name, data.last_name, data.email, 'Something stupid', 'h1', 'Thank You');",
+              "err": {},
+              "uuid": "f93d3317-bee6-4909-a0d3-3c2723b3b0f2",
+              "parentUUID": "53e7e416-cd34-47e2-816c-269ce665884c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "submit a contact us form without all data",
+              "fullTitle": "Test contact-us page via webdriver uni submit a contact us form without all data",
+              "timedOut": null,
+              "duration": 1494,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "contactUs_PO.submitForm(data.first_name, data.last_name, \" \", 'Something stupid', 'body', 'Error');",
+              "err": {},
+              "uuid": "f61983a4-31d4-4f2c-81d4-db692c3cae3f",
+              "parentUUID": "53e7e416-cd34-47e2-816c-269ce665884c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f93d3317-bee6-4909-a0d3-3c2723b3b0f2",
+            "f61983a4-31d4-4f2c-81d4-db692c3cae3f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4915,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

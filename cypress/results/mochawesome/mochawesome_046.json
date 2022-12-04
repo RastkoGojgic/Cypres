@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-12-04T19:26:06.270Z",
+    "end": "2022-12-04T19:26:09.322Z",
+    "duration": 3052,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "88d519e4-bba4-4ad8-9337-5bea7f12465f",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Webdriver-uni\\assertions.cy.js",
+      "file": "cypress\\e2e\\Webdriver-uni\\assertions.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "adb6eb6d-0749-44fa-85a8-50ec0f6d9c1b",
+          "title": "Preform assertion on webdriver uni page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Use .document and chai assertions to check charset property",
+              "fullTitle": "Preform assertion on webdriver uni page Use .document and chai assertions to check charset property",
+              "timedOut": null,
+              "duration": 1367,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://www.webdriveruniversity.com/Contact-Us/contactus.html\");\ncy.document().should('have.a.property', 'charset', 'UTF-8');\ncy.title().should('contain', \"WebDriver\");",
+              "err": {},
+              "uuid": "4d605da8-2a4f-4649-a7c9-79e149d3e6af",
+              "parentUUID": "adb6eb6d-0749-44fa-85a8-50ec0f6d9c1b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4d605da8-2a4f-4649-a7c9-79e149d3e6af"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1367,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

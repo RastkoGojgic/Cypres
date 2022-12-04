@@ -1,0 +1,145 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-12-04T19:23:52.826Z",
+    "end": "2022-12-04T19:24:27.048Z",
+    "duration": 34222,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5a5a1861-0eaa-404f-9161-a5941aae53a8",
+      "title": "",
+      "fullFile": "cypress\\e2e\\ViZzitt\\delete-place.cy.js",
+      "file": "cypress\\e2e\\ViZzitt\\delete-place.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bac38dcb-a60a-49dd-8f38-89fdd95ea27a",
+          "title": "Test delete place functionality on VizZit website",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Try to delete a place whilst not logged in",
+              "fullTitle": "Test delete place functionality on VizZit website Try to delete a place whilst not logged in",
+              "timedOut": null,
+              "duration": 21722,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.get('.nav').find('a').contains('All Places').click();\ncy.get('.card').contains('New Random Place').parent().find('a').click({\n  force: true\n});\ncy.get('.btn-success').should('not.exist');",
+              "err": {},
+              "uuid": "18241e4b-3978-4883-9f52-72b4027e3a5c",
+              "parentUUID": "bac38dcb-a60a-49dd-8f38-89fdd95ea27a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Try to delete a place created by someone else",
+              "fullTitle": "Test delete place functionality on VizZit website Try to delete a place created by someone else",
+              "timedOut": null,
+              "duration": 5111,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.NavigateToLoginPage();\ncy.populateLoginForm(\"rastko\", \"juventus1\");\ncy.get('.card').contains('Muzej Primenjene Umetnosti').parent().find('a').click({\n  force: true\n});\ncy.get('.btn-danger').should('not.exist');",
+              "err": {},
+              "uuid": "1c950e26-78c6-4e17-96d4-c358e0c5d0d2",
+              "parentUUID": "bac38dcb-a60a-49dd-8f38-89fdd95ea27a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Seuccessfully delete a place",
+              "fullTitle": "Test delete place functionality on VizZit website Seuccessfully delete a place",
+              "timedOut": null,
+              "duration": 7247,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.NavigateToLoginPage();\ncy.populateLoginForm(\"rastko\", \"juventus1\");\ncy.get('.card').contains('New Random Place').parent().find('a').click({\n  force: true\n});\ncy.get('.btn-danger').contains(\"Delete\").click();\ncy.get('.alert').should('contain', 'Successfully deleted a place');",
+              "err": {},
+              "uuid": "f50a29a4-8d10-4413-84e3-9fb5782df1be",
+              "parentUUID": "bac38dcb-a60a-49dd-8f38-89fdd95ea27a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "18241e4b-3978-4883-9f52-72b4027e3a5c",
+            "1c950e26-78c6-4e17-96d4-c358e0c5d0d2",
+            "f50a29a4-8d10-4413-84e3-9fb5782df1be"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 34080,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

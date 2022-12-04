@@ -1,0 +1,164 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-12-04T19:39:46.880Z",
+    "end": "2022-12-04T19:40:53.965Z",
+    "duration": 67085,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4217dc99-d2fd-49ed-a657-7168faf07a08",
+      "title": "",
+      "fullFile": "cypress\\e2e\\ViZzitt\\edit-place.cy.js",
+      "file": "cypress\\e2e\\ViZzitt\\edit-place.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0da3ecc8-e8af-480e-804e-b3db72b7d849",
+          "title": "Test edit functionality on VizZit website",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Successfully edit a place via following path home/login/specific place/edit place",
+              "fullTitle": "Test edit functionality on VizZit website Successfully edit a place via following path home/login/specific place/edit place",
+              "timedOut": null,
+              "duration": 34611,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.nav').find('a').contains('Login').click();\ncy.populateLoginForm(data.first_name, data.password);\ncy.get('.btn, .btn-info').first().click({\n  force: true\n});\ncy.get('.card-title').should('contain', 'Kalemegdanska Tvrđava');\ncy.get('a').contains('Edit Place').click();\ncy.get('#title').clear({\n  force: true\n}).type('New Random Place', {\n  force: true\n});\ncy.get('.btn').contains('Save Changes').click();\ncy.get('.alert').should('contain', 'Successfully edited a place');\ncy.get('.card-title').should('contain', 'New Random Place');\ncy.get('a').contains('Edit Place').click();\ncy.get('#title').clear({\n  force: true\n}).type('Kalemegdanska Tvrđava', {\n  force: true\n});\ncy.get('.btn').contains('Save Changes').click();\ncy.get('.alert').should('contain', 'Successfully edited a place');\ncy.get('.card-title').should('contain', 'Kalemegdanska Tvrđava');",
+              "err": {},
+              "uuid": "3a635bf8-c1df-41be-bfc5-d9e4f241c3a1",
+              "parentUUID": "0da3ecc8-e8af-480e-804e-b3db72b7d849",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Try to edit a place with empty title field",
+              "fullTitle": "Test edit functionality on VizZit website Try to edit a place with empty title field",
+              "timedOut": null,
+              "duration": 14092,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.nav').find('a').contains('Login').click();\ncy.populateLoginForm(data.first_name, data.password);\ncy.get('.btn, .btn-info').first().click({\n  force: true\n});\ncy.get('.card-title').should('contain', 'Kalemegdanska Tvrđava');\ncy.get('a').contains('Edit Place').click();\ncy.get('#title').clear({\n  force: true\n});\ncy.get('.btn').contains('Save Changes').click();\ncy.get('#title').should(\"have.css\", \"border-color\", \"rgb(220, 53, 69)\");",
+              "err": {},
+              "uuid": "51c58cc5-8468-4e3d-80f1-94abca0c00a2",
+              "parentUUID": "0da3ecc8-e8af-480e-804e-b3db72b7d849",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Try to edit a place without loging in",
+              "fullTitle": "Test edit functionality on VizZit website Try to edit a place without loging in",
+              "timedOut": null,
+              "duration": 13034,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.nav').find('a').contains('All Places').click();\ncy.get('.btn, .btn-info').first().click({\n  force: true\n});\ncy.get(\"a[href='/places/632adab90395c80016ca6db8/edit']\").should('not.exist');",
+              "err": {},
+              "uuid": "8e619b09-db66-44d0-b9d8-d3743d453ee1",
+              "parentUUID": "0da3ecc8-e8af-480e-804e-b3db72b7d849",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Try to edit a place created by someone else",
+              "fullTitle": "Test edit functionality on VizZit website Try to edit a place created by someone else",
+              "timedOut": null,
+              "duration": 5187,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.nav').find('a').contains('Login').click();\ncy.populateLoginForm(data.first_name, data.password);\ncy.get('.card').contains('Muzej Primenjene Umetnosti').parent().find('a').click({\n  force: true\n});\ncy.get(\"a[href='/places/632adab90395c80016ca6db8/edit']\").should('not.exist');",
+              "err": {},
+              "uuid": "2ad34e31-cb09-443f-83af-cdb195d592a2",
+              "parentUUID": "0da3ecc8-e8af-480e-804e-b3db72b7d849",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3a635bf8-c1df-41be-bfc5-d9e4f241c3a1",
+            "51c58cc5-8468-4e3d-80f1-94abca0c00a2",
+            "8e619b09-db66-44d0-b9d8-d3743d453ee1",
+            "2ad34e31-cb09-443f-83af-cdb195d592a2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 66924,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

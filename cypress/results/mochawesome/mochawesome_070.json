@@ -1,0 +1,145 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-12-04T19:28:46.698Z",
+    "end": "2022-12-04T19:29:02.234Z",
+    "duration": 15536,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "cccad1c7-912a-46ab-be41-f59ebc10db08",
+      "title": "",
+      "fullFile": "cypress\\e2e\\ViZzitt\\login.cy.js",
+      "file": "cypress\\e2e\\ViZzitt\\login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "eb321b21-827e-4532-a6b8-1eb8d8c13ffd",
+          "title": "Test Login option on VizZit website",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Successfully Login with username and password",
+              "fullTitle": "Test Login option on VizZit website Successfully Login with username and password",
+              "timedOut": null,
+              "duration": 10800,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.populateLoginForm(data.first_name, data.password);\ncy.get('.alert').should('contain', 'Welcome back');\ncy.url().should('contain', 'https://vizzitt.onrender.com/places');",
+              "err": {},
+              "uuid": "20b44068-7b3a-4192-90d2-b6fa065f4767",
+              "parentUUID": "eb321b21-827e-4532-a6b8-1eb8d8c13ffd",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Attempt to login with incorrect name or password",
+              "fullTitle": "Test Login option on VizZit website Attempt to login with incorrect name or password",
+              "timedOut": null,
+              "duration": 3686,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.populateLoginForm(data.first_name, 'sasadasddas');\ncy.get('.alert').should('contain', 'Password or username is incorrect');\ncy.url().should('contain', 'https://vizzitt.onrender.com/login');",
+              "err": {},
+              "uuid": "73a5b8de-6246-4436-98fb-8650e6576244",
+              "parentUUID": "eb321b21-827e-4532-a6b8-1eb8d8c13ffd",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Attempt to login but leave input fields empty",
+              "fullTitle": "Test Login option on VizZit website Attempt to login but leave input fields empty",
+              "timedOut": null,
+              "duration": 993,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.btn, btn-success').click();\ncy.get('#username').should(\"have.css\", \"border-color\", \"rgb(220, 53, 69)\");\ncy.url().should('contain', 'https://vizzitt.onrender.com/login');",
+              "err": {},
+              "uuid": "bd7a155e-fda2-4f0f-9b73-76da8fb5e1c0",
+              "parentUUID": "eb321b21-827e-4532-a6b8-1eb8d8c13ffd",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "20b44068-7b3a-4192-90d2-b6fa065f4767",
+            "73a5b8de-6246-4436-98fb-8650e6576244",
+            "bd7a155e-fda2-4f0f-9b73-76da8fb5e1c0"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 15479,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

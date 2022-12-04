@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-12-04T19:25:25.768Z",
+    "end": "2022-12-04T19:25:31.314Z",
+    "duration": 5546,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "23e64fd7-4fc6-4f44-bc9b-c0419e1ee8d3",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Webdriver-uni\\contact-us1.cy.js",
+      "file": "cypress\\e2e\\Webdriver-uni\\contact-us1.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4652f41b-0098-447a-8feb-71a241853b72",
+          "title": "Test contact us form form WebdriverUni",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should be able to submit a successful submition via Constact-us form",
+              "fullTitle": "Test contact us form form WebdriverUni Should be able to submit a successful submition via Constact-us form",
+              "timedOut": null,
+              "duration": 2788,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//cy.get('#contact-us').click()\ncy.get('[name=\"first_name\"]').type(Cypress.env('first_name'));\ncy.get('[name=\"last_name\"]').type(\"Cole\");\ncy.get('[name=\"email\"]').type(\"j.cole@gmail.com\");\ncy.get('textarea.feedback-input').type(\"I played for Chelsea\");\ncy.get('[type=\"submit\"]').click();\ncy.get('h1').should('have.text', 'Thank You for your Message!');",
+              "err": {},
+              "uuid": "979789bf-7bb9-42fd-96f6-05687182ef88",
+              "parentUUID": "4652f41b-0098-447a-8feb-71a241853b72",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should NOT be able to submit a successful submition via Constact-us form as all fields are required",
+              "fullTitle": "Test contact us form form WebdriverUni Should NOT be able to submit a successful submition via Constact-us form as all fields are required",
+              "timedOut": null,
+              "duration": 1430,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[name=\"first_name\"]').type(\"Joe\");\ncy.get('[name=\"last_name\"]').type(\"Cole\");\ncy.get('textarea.feedback-input').type(\"I played for Chelsea\");\ncy.get('[type=\"submit\"]').click();\ncy.get('body').contains(\"Error: all fields are required\");",
+              "err": {},
+              "uuid": "eb07b6cb-2536-4b57-a57d-44fee0a3af99",
+              "parentUUID": "4652f41b-0098-447a-8feb-71a241853b72",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "979789bf-7bb9-42fd-96f6-05687182ef88",
+            "eb07b6cb-2536-4b57-a57d-44fee0a3af99"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4218,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
